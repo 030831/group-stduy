@@ -1,0 +1,18 @@
+while True:
+    try:
+        a,b=input().split()
+
+        value=0
+        flag=0
+        for i in range(len(b)):
+            if b[i]==a[value]:
+                value+=1
+                if value==len(a):
+                    flag=1
+                    break
+        if flag==1:
+            print('Yes')
+        else:
+            print('No')
+    except:
+        break

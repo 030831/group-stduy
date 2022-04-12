@@ -1,0 +1,10 @@
+n=int(input())
+H=list(map(int,input().split()))+[float("inf")]
+
+maxkill=0
+nowkill=0
+for i in range(len(H)):
+    if H[nowkill]<H[i]:
+        maxkill=max(maxkill,i-nowkill-1)
+        nowkill=i
+print(maxkill)
