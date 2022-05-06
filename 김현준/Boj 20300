@@ -1,0 +1,9 @@
+a=int(input())
+b=list(map(int,input().split()))
+b.sort()
+A=[]
+if len(b)%2==1:
+    b.remove(max(b))
+for i in range(len(b)//2):
+    A.append(b[i]+b[-i-1])
+print(max(A))
