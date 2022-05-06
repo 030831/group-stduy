@@ -1,0 +1,18 @@
+e,em,m,mh,h=map(int,input().split())
+
+count=0
+
+for i in range(em+1):
+    a=e+i
+    b=m+em+mh-i
+    c=h
+
+    y=(b-c)//2
+
+    if y<0:
+        y=0
+    elif y>mh:
+        y=mh
+    k=min(a,b-y,c+y)
+    count=max(count,k)
+print(count)
