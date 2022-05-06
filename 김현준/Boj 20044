@@ -1,0 +1,7 @@
+a=int(input())
+b=list(map(int,input().split()))
+b.sort()
+A=[]
+for i in range(len(b)//2):
+    A.append(b[i]+b[len(b)-i-1])
+print(min(A))
