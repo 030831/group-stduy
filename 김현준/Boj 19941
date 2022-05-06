@@ -1,0 +1,11 @@
+a,b=map(int,input().split())
+A=list(input())
+count=0
+for i in range(a):
+    if A[i]=='P':
+        for j in range(max(i-b,0),min(i+b+1,a)):
+             if A[j]=='H':
+                A[j]='X'
+                count+=1
+                break
+print(count)
