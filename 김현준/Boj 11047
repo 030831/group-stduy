@@ -1,0 +1,17 @@
+a,b=input().split()
+a=int(a)
+b=int(b)
+count=[]
+k=0
+for i in range(a):
+    c=int(input())
+    count.append(c)
+count.sort(reverse=True)
+count=list(map(int,count))
+for i in range(len(count)):
+    if count[i]<=b:
+        k=k+b//count[i]
+        b=b%count[i]
+    if b==0:
+        break
+print(k)
