@@ -1,0 +1,13 @@
+a,b=input().split()
+A,B=len(a),len(b)
+count=0
+if A!=B:
+    print(count)
+else:
+    for i in range(A):
+        if a[i]!=b[i]:
+            break
+        else:
+            if a[i]=='8':
+                count+=1
+    print(count)
