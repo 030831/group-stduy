@@ -1,0 +1,14 @@
+for i in range(int(input())):
+    a,b=map(int,input().split())
+    count=0
+    c=[]
+    for j in range(b):
+        A,B=map(int,input().split())
+        c.append(A*B)
+        c.sort(reverse=True)
+    for k in range(len(c)):
+        a-=c[k]
+        count+=1
+        if a<=0:
+            count-=1
+    print(count+1)
