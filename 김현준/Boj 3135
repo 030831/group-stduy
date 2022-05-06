@@ -1,0 +1,21 @@
+a,b=map(int,input().split())
+count=0
+if a>b:
+    count=a-b
+elif a<=b:
+    count=b-a
+
+L=[]
+for i in range(int(input())):
+    A=int(input())
+    if A>=b:
+        if A-b<count:
+            L.append(A-b)
+    elif A<b:
+        if b-A<count:
+            L.append(b-A)
+
+if len(L)==0:
+    print(count)
+else:
+    print(min(L)+1)
