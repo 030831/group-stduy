@@ -1,0 +1,19 @@
+import sys
+
+input=sys.stdin.readline
+
+a=int(input())
+A,B=map(int,input().split())
+L=[]
+count=0
+for i in range(a+1):
+    L.append(int(input()))
+count+=L[0]
+MAX=L[0]/A
+L.pop(0)
+L.sort(reverse=True)
+for j in range(len(L)):
+    count += L[j]
+    if count/(A+B*(j+1))>MAX:
+        MAX=count/(A+B*(j+1))
+print(int(MAX))
