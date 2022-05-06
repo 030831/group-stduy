@@ -1,0 +1,10 @@
+import sys
+
+input=sys.stdin.readline
+
+a=int(input())
+A=sum(list(map(int,input().split())))
+B=sorted(list(map(int,input().split())))
+for i in range(a):
+    A+=B[i]*i
+print(A)
