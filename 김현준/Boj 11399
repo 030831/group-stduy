@@ -1,0 +1,9 @@
+a=int(input())
+b=list(map(int,input().split()))
+b.sort()
+count=0
+k=0
+for i in range(len(b)):
+    k+=b[i]
+    count+=k
+print(count)
