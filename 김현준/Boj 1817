@@ -1,0 +1,15 @@
+a,b=map(int,input().split())
+count=1
+k=b
+A=[]
+if a==0:
+    print(0)
+else:
+    A = list(map(int, input().split()))
+    for i in range(1,len(A)):
+        if k>=A[i-1]:
+            k-=A[i-1]
+            if k - A[i] < 0:
+                count += 1
+                k=b
+    print(count)
