@@ -1,0 +1,9 @@
+a,b,c=map(int,input().split())
+A=list(map(int,input().split()))
+count=0
+k=0
+for i in range(len(A)):
+    if A[i]==b+c*k:
+        count+=1
+        k+=1
+print(count)
