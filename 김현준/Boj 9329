@@ -1,0 +1,23 @@
+import sys
+input=sys.stdin.readline
+
+for i in range(int(input())):
+    a,b=map(int,input().split())
+    A=[]
+    B=[]
+    C=[]
+    count=0
+    for j in range(a):
+        A.append(list(map(int,input().split())))
+        C.append(max(A[j]))
+        A[j].remove(A[j][0])
+        A[j].remove(max(A[j]))
+
+    B=list(map(int,input().split()))
+    for k in range(len(A)):
+        L =[]
+        for _ in range(len(A[k])):
+            L.append(B[A[k][_]-1])
+        count+=C[k]*min(L)
+    print(count)
+
