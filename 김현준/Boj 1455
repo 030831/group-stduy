@@ -1,0 +1,17 @@
+import sys
+input=sys.stdin.readline
+
+def xor(a,b):
+    for i in range(a+1):
+        for j in range(b+1):
+            matrix[i][j]^=1
+
+A,B=map(int,input().split())
+matrix=[list(map(int,list(input().rstrip()))) for i in range(A)]
+count=0
+for i in range(A-1,-1,-1):
+    for j in range(B-1,-1,-1):
+        if matrix[i][j]:
+            count+=1
+            xor(i,j)
+print(count)
