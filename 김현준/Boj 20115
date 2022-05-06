@@ -1,0 +1,18 @@
+a=int(input())
+b=list(map(int,input().split()))
+b.sort(reverse=True)
+i=0
+while True:
+    if b[i]<=b[i+1]:
+        b[i+1]+=b[i]/2
+        del b[i]
+    else:
+        b[i]+=b[i+1]/2
+        del b[i+1]
+    if len(b)==1:
+        if b[0].is_integer():
+            print(int(b[0]))
+            exit()
+        else:
+            print(b[0])
+            exit()
