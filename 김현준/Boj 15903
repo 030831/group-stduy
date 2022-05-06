@@ -1,0 +1,13 @@
+a,b=map(int,input().split())
+A=list(map(int,input().split()))
+A.sort()
+if b==0:
+    print(sum(A))
+else:
+    for i in range(b):
+        k=0
+        k=A[0]+A[1]
+        A[0]=k
+        A[1]=k
+        A.sort()
+    print(sum(A))
