@@ -1,0 +1,11 @@
+a = input().split('-')
+num = []
+count=0
+num = a[0].split('+')
+num = list(map(int, num))
+count += sum(num)*2
+for i in a:
+    num=i.split('+')
+    num=list(map(int,num))
+    count-=sum(num)
+print(count)
