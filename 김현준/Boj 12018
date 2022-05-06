@@ -1,0 +1,20 @@
+a,b=map(int,input().split())
+P=[]
+L=[]
+for i in range(a):
+    A,B=map(int,input().split())
+    L=list(map(int,input().split()))
+    L.sort(reverse=True)
+    if A>=B:
+        P.append(L[B-1])
+    elif A<B:
+        P.append(1)
+P.sort()
+count=0
+for j in range(len(P)):
+    if b>=P[j]:
+        count+=1
+        b-=P[j]
+    elif b<=0:
+        break
+print(count)
