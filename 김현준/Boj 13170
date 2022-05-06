@@ -1,0 +1,5 @@
+N,K,P,W=map(int,input().split())
+if P%W==0:
+    print(P//W)
+else:
+    print(P//W+1)
