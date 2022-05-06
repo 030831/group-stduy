@@ -1,0 +1,13 @@
+import sys
+input=sys.stdin.readline
+
+for _ in range(int(input())):
+    a=int(input())
+    b=list(map(int,input().split()))
+    count = 0
+    for i in range(a):
+        for j in range(a-1,i,-1):
+            if b[j]<b[j-1]:
+                b[j],b[j-1]=b[j-1],b[j]
+                count+=1
+    print(count)
