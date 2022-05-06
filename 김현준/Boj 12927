@@ -1,0 +1,13 @@
+a=list(input())
+a.insert(0,'N')
+count=0
+for i in range(1,len(a)):
+    if a[i]=='Y':
+        for j in range(i,len(a),i):
+
+            if a[j]=='Y':
+                a[j]='N'
+            elif a[j]=='N':
+                a[j]='Y'
+        count+=1
+print(count)
