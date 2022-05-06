@@ -1,0 +1,10 @@
+k=int(input())
+a=input()
+A=0
+B=0
+if a.count("LL")==0:
+    print(len(a))
+else:
+    A=a.count("S")
+    B=a.count("LL")
+    print(A+B+1)
