@@ -1,0 +1,15 @@
+while True:
+    a=input()
+    if a=='#':
+        break
+    else:
+        a=a.lower()
+        A=a[0]
+        B=[]
+        for i in range(2,len(a)):
+            B.append(a[i])
+        count=0
+        for i in B:
+            if str(A)==str(i):
+                count+=1
+        print(A,count)
