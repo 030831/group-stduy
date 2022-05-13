@@ -1,0 +1,11 @@
+a,b,c,d=map(int,input().split())
+L=[0]*1250000
+for i in range(d+1):
+    for j in range(d+1):
+        for _ in range(d+1):
+            if a*i+b*j+c*_==d:
+                L[d]=1
+                break
+            if a*i+b*j+c*_>d:
+                break
+print(L[d])
