@@ -1,0 +1,25 @@
+a=int(input())
+b=input()
+
+A=0 ; B=0 ; C=0
+L=['ABC']*34
+LL=['BABC']*25
+LLL=['CCAABB']*17
+L="".join(L)
+LL="".join(LL)
+LLL="".join(LLL)
+for i in range(len(b)):
+    if b[i]==L[i]:
+        A+=1
+    if b[i]==LL[i]:
+        B+=1
+    if b[i]==LLL[i]:
+        C+=1
+
+print(max(A,B,C))
+if max(A,B,C)==A:
+    print("Adrian")
+if max(A,B,C)==B:
+    print("Bruno")
+if max(A,B,C)==C:
+    print("Goran")
