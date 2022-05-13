@@ -1,0 +1,12 @@
+a=0
+b=0
+c=0
+d=0
+for i in range(2,101):
+    for j in range(2,101):
+        for k in range(j+1,101):
+            for _ in range(k+1,101):
+                if i**3==j**3+k**3+_**3:
+                    print("Cube = %d, Triple = (%d,%d,%d)"%(i,j,k,_))
+                if i**3<j**3+k**3+_**3:
+                    break
