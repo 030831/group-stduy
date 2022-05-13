@@ -1,0 +1,9 @@
+a,b=map(int,input().split())
+
+for i in range(3,2000):
+    for j in range(3,i+1):
+        k=(i*2)+((j-2)*2)
+        if k==a and (i*j)-k==b:
+            print(i,j)
+#k에서 바깥쪽 i*2는  가로 2줄의 값과 (j-2)*2는 가장위,가장아래를 뺴서 j-2이고 바깥쪽이므로 2를 곱해줌
+#i*j는 전체 넓이 , k는 바깥쪽넓이가 되므로 결론적으로 i*j-k는 안쪽넓이가됨.
