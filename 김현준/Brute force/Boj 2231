@@ -1,0 +1,10 @@
+a=int(input())
+
+result=0
+
+for i in range(a+1):
+    L = list(map(int, str(i)))
+    if sum(L)+i==a:
+        result=i
+        break
+print(result)
