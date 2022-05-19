@@ -1,0 +1,1 @@
+__libc_start_main(){_exit(!write(1,"4\n0 0\n1 0\n0 0\n0 1",17));}main;

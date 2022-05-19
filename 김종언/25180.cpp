@@ -1,0 +1,1 @@
+main(n,k){scanf("%d",&n);k=(n+8)/9;printf("%d",k+n%2*!(k&1));}
