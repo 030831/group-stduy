@@ -1,0 +1,24 @@
+from collections import deque
+
+a=input()
+deq=deque()
+
+for i in range(len(a)):
+    answer = 0
+    try:
+        deq.append(int(a[i]))
+    except:
+        if a[i]=='+':
+            answer=deq.pop()+deq.pop()
+        elif a[i]=='-':
+            A=deq.pop()
+            B=deq.pop()
+            answer=B-A
+        elif a[i]=='*':
+            answer=deq.pop()*deq.pop()
+        elif a[i]=='/':
+            A = deq.pop()
+            B = deq.pop()
+            answer = B // A
+        deq.append(answer)
+print(deq.pop())
