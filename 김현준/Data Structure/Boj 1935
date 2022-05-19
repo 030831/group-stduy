@@ -1,0 +1,28 @@
+import sys
+
+input=sys.stdin.readline
+
+a=int(input())
+b=input()
+c=[0]*a
+stack=[]
+for i in range(a):
+    c[i]=int(input())
+
+for i in b:
+    if 'A'<=i<='Z':
+        stack.append(c[ord(i)-ord('A')])
+    else:
+        if len(stack)>=2:
+            str1=stack.pop()
+            str2=stack.pop()
+        if i=='+':
+            stack.append(str2+str1)
+        elif i=='-':
+            stack.append(str2-str1)
+        elif i=='*':
+            stack.append(str2*str1)
+        elif i=='/':
+            stack.append(str2/str1)
+
+print("%.2f"%stack[0])
