@@ -1,0 +1,26 @@
+from collections import deque
+
+a=int(input())
+deq=deque(list(map(int,input().split())))
+deq2=deque()
+
+i=1
+while True:
+    if deq[0]!=i:
+        if len(deq2)>0 and deq2[0]==i:
+            deq2.popleft()
+            i += 1
+        else:
+            deq2.appendleft(deq.popleft())
+    elif deq[0]==i:
+        deq.popleft()
+        i+=1
+    if len(deq)==0:
+        if len(deq2)>=2 and deq2[0]!=min(deq2):
+            print("Sad")
+            break
+        else:
+            deq.append(deq2.popleft())
+    if i==a:
+        print("Nice")
+        break
