@@ -1,0 +1,7 @@
+stack=[]
+a=int(input())
+count=1
+for i in range(a):
+    stack=input().split()
+    print("Case #%d:"%(count),*stack[::-1])
+    count+=1
