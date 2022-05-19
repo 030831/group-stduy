@@ -1,0 +1,18 @@
+import sys
+input=sys.stdin.readline
+
+deq=list(input().rstrip())
+deq2=[]
+k = len(deq)
+for i in range(int(input())):
+    a=input().split()
+    if a[0]=='P':
+        deq.append(a[1])
+    elif a[0]=='L' and deq:
+        deq2.append(deq.pop())
+    elif a[0]=='B' and deq:
+        deq.pop()
+    elif a[0]=='D' and deq2:
+        deq.append(deq2.pop())
+
+print("".join(deq + list(reversed(deq2))))
