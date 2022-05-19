@@ -1,0 +1,13 @@
+stack=[]
+
+a=input()
+count=0
+for i in range(len(a)):
+    if a[i]=='(':
+        stack.append(a[i])
+    elif a[i]==')':
+        try:
+            stack.pop()
+        except:
+            count+=1
+print(len(stack)+count)
