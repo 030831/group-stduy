@@ -1,0 +1,23 @@
+for i in range(int(input())):
+    L = []
+    P = []
+    a=int(input())
+    L=input().split()
+    j = 0
+    k = 0
+    MIN=ord(L[0])
+    if a==1:
+        print(*L)
+    else:
+        while True:
+            if MIN>=ord(L[j+1]):
+                P.append(L[j+1])
+                MIN = ord(L[j + 1])
+                del L[j+1]
+                k+=1
+            else:
+                j+=1
+            if k+j+1==a or k+j+1==1000:
+                P.sort()
+                print(*(P+L),sep='')
+                break
