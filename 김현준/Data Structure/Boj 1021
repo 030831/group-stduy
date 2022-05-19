@@ -1,0 +1,26 @@
+from collections import deque
+
+A,B=map(int,input().split())
+count=0
+deq=list(map(int,input().split()))
+deq=deque(deq)
+deq2=[]
+for i in range(1,A+1):
+    deq2.append(i)
+deq2=deque(deq2)
+count=0
+
+while True:
+    if deq[0]!=deq2[0]:
+        if deq2.index(deq[0])+1<=len(deq2)//2+1:
+            deq2.append(deq2.popleft())
+            count+=1
+        elif deq2.index(deq[0])+1>len(deq2)//2+1:
+            deq2.appendleft(deq2.pop())
+            count+=1
+    if deq[0]==deq2[0]:
+        del deq[0]
+        del deq2[0]
+    if len(deq)==0:
+        print(count)
+        break
