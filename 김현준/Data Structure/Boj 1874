@@ -1,0 +1,36 @@
+L=[]
+stack=[]
+for i in range(int(input())):
+    L.append(int(input()))
+
+i=1
+j=0
+LL=[]
+stack.append(i)
+LLL=[]
+LLL.append("+")
+while True:
+    if LL == L:
+        break
+    if len(stack)==0:
+        i+=1
+        stack.append(i)
+        LLL.append("+")
+    if stack[len(stack)-1]>L[j]:
+        LLL.append("NO")
+        break
+    elif stack[len(stack) - 1] != L[j]:
+        LLL.append("+")
+        i += 1
+        stack.append(i)
+    elif stack[len(stack)-1]==L[j]:
+        LLL.append("-")
+        LL.append(stack[-1])
+        stack.pop()
+        j+=1
+
+if "NO" in LLL:
+    print("NO")
+else:
+    for i in LLL:
+        print(i)
