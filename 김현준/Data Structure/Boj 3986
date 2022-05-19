@@ -1,0 +1,16 @@
+count=0
+for i in range(int(input())):
+    a=input()
+    while True:
+        if "AA" in a:
+            a=a.replace("AA","")
+            continue
+        if "BB" in a:
+            a=a.replace("BB","")
+            continue
+        if len(a)==0:
+            count+=1
+            break
+        elif "AA" or 'BB' not in a:
+            break
+print(count)
