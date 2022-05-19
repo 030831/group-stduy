@@ -1,0 +1,33 @@
+from collections import deque
+import sys
+input=sys.stdin.readline
+a,b,c=map(int,input().split())
+
+deq=deque()
+deq2=deque()
+
+for i in range(1,a+1):
+    deq.append(i)
+
+k=0
+count=0
+while deq:
+    if count%2==0:
+        for i in range(b-1):
+            deq.append(deq.popleft())
+        k+=1
+        deq2.append(deq.popleft())
+        if k%c==0:
+            k=0
+            count+=1
+    elif count % 2 == 1:
+        for i in range(b - 1):
+            deq.appendleft(deq.pop())
+        k += 1
+
+        deq2.append(deq.pop())
+        if k%c==0:
+            k=0
+            count+=1
+for i in deq2:
+    print(i)
