@@ -1,0 +1,18 @@
+import sys
+
+input=sys.stdin.readline
+stack=[]
+for i in range(int(input())):
+    stack.append(int(input()))
+
+count=0
+i=len(stack)-1
+MAX=stack[i]
+while True:
+    if stack[i-1]>MAX:
+        MAX=stack[i-1]
+        count+=1
+    i-=1
+    if i==0:
+        print(count+1)
+        break
