@@ -1,0 +1,19 @@
+a=input()
+if a=='고무오리 디버깅 시작':
+    stack=[]
+    while True:
+        b=input().rstrip()
+        if b=='고무오리 디버깅 끝':
+            break
+        elif b=='문제':
+            stack.append(b)
+        elif b=='고무오리':
+            try:
+                stack.pop()
+            except:
+                stack.append("문제")
+                stack.append("문제")
+    if len(stack)==0:
+        print("고무오리야 사랑해")
+    else:
+        print("힝구")
