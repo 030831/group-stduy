@@ -1,0 +1,1 @@
+main(a,b){scanf("%d%d",&a,&b);printf("%d",a*(100-b)<1e4);}
